@@ -19,7 +19,7 @@ const MainNavigation = () => {
                             className={({ isActive }) => (
                                 isActive ?
                                 classes.active : undefined
-                            )}>Products</NavLink>
+                            )}>Collection</NavLink>
                     </li>
                 </ul>
             </nav>
