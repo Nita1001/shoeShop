@@ -1,10 +1,13 @@
-import { createBrowserRouter, RouterProvider } from 'react';
+
+
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+
 import HomePage from './pages/Home.page';
 import Products from './pages/Products.page';
 import RootLayout from './pages/Root'
 
 import './App.css';
-// https://example.com/
+
 
 const router = createBrowserRouter([
   { path: '/',
@@ -19,11 +22,8 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
         <RouterProvider router={router}/>
-      </header>
-    </div>
+
   );
 }
 
