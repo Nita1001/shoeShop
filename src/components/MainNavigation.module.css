@@ -6,21 +6,24 @@
     align-items: center;
     justify-content: center;
     background-color: slategrey;
-    justify-content: space-between;
 }
 
 .list {
     gap: 1rem;
+    padding: 0;
     display: flex;
     list-style-type: none;
 }
 
 .list a {
-    color: aliceblue;
     list-style: none;
+    color: aliceblue;
     text-decoration: none;
 }
-
-.list a:hover {
-    opacity: 0.34;
+.list a:hover, .list a:active { 
+    opacity: 0.69;
+    color: white;
+    padding-bottom: 1rem;
+    text-decoration: underline;
 }
+
