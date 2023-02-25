@@ -1,0 +1,25 @@
+.container {
+    margin-top: 0;
+    background-color: #9cb4d2;
+}
+
+.list {
+    gap: 4rem;
+    color: pink;
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+}
+
+.list a {
+    list-style: none;
+    color: aliceblue;
+    text-decoration: none;
+}
+
+h3{
+    margin-top: 0rem;
+}
+
+
+/* #8f85b2 */
