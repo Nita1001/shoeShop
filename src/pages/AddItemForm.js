@@ -1,48 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import uniqid from 'uniqid';
 
 import classes from './AddItemForm.module.css'
 
 const AddItemForm = () => {
-
   const [data, setData] = useState([]);
-  const [index, setIndex] = useState(0);
-
   const [product, setProduct] = useState('');
   const [price, setPrice] = useState('');
   const [image, setImage] = useState('');
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get('https://63f7c3f2833c7c9c608aeae0.mockapi.io/items');
-        setData(response.data);
-      } catch (err) {
-        console.log('status:', err);
-      }
-    };
-
-    fetchData();
-  }, []);
-
-  const addItem = async () => {
-    const newItem = {
-      id: uniqid(),
-      product: 'Shoes',
-      price: '',
-      image: '',
-      index: `${index}`,
-    };
-    try {
-      const response = await axios.post('https://63f7c3f2833c7c9c608aeae0.mockapi.io/items', newItem);
-      setData((prevData) => [...prevData, response.data]);
-      setIndex(index + 1);
-    } catch (err) {
-      console.log('status:', err);
-    }
-  };
-
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -61,8 +27,8 @@ const AddItemForm = () => {
     } catch (err) {
       console.log('status:', err);
     }
+    console.log(data);
   };
-
 
   return (
     <div className={classes.container}>CreateItem
