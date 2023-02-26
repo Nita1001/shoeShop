@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
 
+import classes from './ProductDetail.module.css'
+
 const ProductDetail = () => {
     const [items, setItem] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
@@ -35,16 +37,16 @@ useEffect(()=>{
             <h3>Take bold steps</h3>
             <p>{params.productId}</p>
             {isLoading ? (
-                <div>Loading...</div>
+                <div className={classes.loading}></div>
             ) : selected ? (
-                <div>
+                <div className={classes.img}>
                     <img src={selected.image} alt={selected.product} />
                 </div>
             ) : (
                 <div>Item not found</div>
             )}
             <p>
-                <Link to=".." relative="path">
+                <Link className={classes.link} to=".." relative="path">
                     Back
                 </Link>
             </p>
