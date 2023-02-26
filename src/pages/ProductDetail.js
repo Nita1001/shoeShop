@@ -8,14 +8,13 @@ const ProductDetail = () => {
     const [items, setItem] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const params = useParams();
-    const [selected, setSelected] = useState(); 
+    const [selected, setSelected] = useState();
 
     const fetchItem = async () => {
         try {
             const response = await axios.get(`https://63f7c3f2833c7c9c608aeae0.mockapi.io/items`);
             if (response) {
                 setItem(response.data);
-                console.log(response.data)
                 setIsLoading(false);
             }
         } catch (err) {
@@ -27,21 +26,23 @@ const ProductDetail = () => {
         fetchItem();
     }, []);
 
-useEffect(()=>{
-    setSelected ( items.find((item) => item.id === params.productId));
-    console.log(selected)
-}, [items, params.productId, selected])
+    useEffect(() => {
+        setSelected(items.find((item) => item.id === params.productId));
+    }, [items, params.productId, selected])
 
     return (
         <>
             <h3>Take bold steps</h3>
-            <p>{params.productId}</p>
             {isLoading ? (
                 <div className={classes.loading}></div>
             ) : selected ? (
-                <div className={classes.img}>
-                    <img src={selected.image} alt={selected.product} />
-                </div>
+                <>
+                    <h1>{selected.name}</h1>
+                    <div className={classes.img}>
+                        <img src={selected.image} alt={selected.product}/>
+                    </div>
+                    <h3>Price: {selected.price}$</h3>
+                </>
             ) : (
                 <div>Item not found</div>
             )}

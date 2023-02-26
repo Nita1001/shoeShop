@@ -1,15 +1,16 @@
 .header {
     margin: 0 auto;
     display: flex;
-    padding: 2rem;
-    max-width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    min-width: 100%;
     align-items: center;
     justify-content: center;
     background-color: slategrey;
 }
 
 .list {
-    gap: 1rem;
+    gap: 1.4rem;
     padding: 0;
     display: flex;
     list-style-type: none;

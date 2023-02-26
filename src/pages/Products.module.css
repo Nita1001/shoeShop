@@ -19,7 +19,13 @@
 
 h3{
     margin-top: 0rem;
+    color: rgb(255, 255, 255);
 }
 
+img{
+    max-width: 200px;
+    height: 200px;
+}
 
 /* #8f85b2 */
+/* color: rgb(238, 176, 187); */
