@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import uniqid from 'uniqid';
 
-import classes from './AddItemForm.module.css'
+import classes from './EditItemForm.module.css'
 
-const AddItemForm = () => {
+const EditItemForm = () => {
   const [add, setAdd] = useState(false);
   const [remove, setRemove] = useState(false);
   const [usersChoice, setUsersChoice] = useState(false);
@@ -81,17 +81,18 @@ const AddItemForm = () => {
             </form>
           </div>
           : remove ?
-            <form>
-              <div>
-                <label htmlFor="product">Products Id:</label>
-                <input type="text" id="product" value={product} onChange={(e) => setProduct(e.target.value)} />
+            <div>
+              <form className={classes.removeItem}>
+                <label  htmlFor="product">Products Id:</label>
+                <input  type="text" id="product" value={product} onChange={(e) => setProduct(e.target.value)} />
+                <button onClick={onRemoveItem}>Remove Item</button>
+              </form>              
               </div>
-              <button onClick={onRemoveItem}>Remove Item</button>
-            </form>
+
             : null
       }
     </>
   );
 };
 
-export default AddItemForm;
+export default EditItemForm;
