@@ -1,5 +1,19 @@
+body{
+    background-color: #e5eef6f6;
+}
+
 p{
     color: rgba(0, 0, 0, 0.546);
-    font-size: larger;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.cardsContainer{
+    display: flex;
+    width: 50rem;
+    height: 20rem;
+    margin: 0 auto;
+    margin-top: 4rem;
+    align-items: center;
+    justify-content: space-between;
 }
