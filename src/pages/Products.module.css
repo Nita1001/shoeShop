@@ -38,3 +38,24 @@ h6{
 
 /* #8f85b2 */
 /* color: rgb(238, 176, 187); */
+
+.loading {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: inline-block;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top-color: #090707;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+        transform: rotate(360deg);
+    }
+  }
+  @keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+  }

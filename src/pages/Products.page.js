@@ -6,6 +6,7 @@ import classes from './Products.module.css';
 const Products = () => {
   const [products, setProducts] = useState([]);
   const [selected, setSelected] = useState();
+  const [isLoading, setIsLoading] = useState(true);
   const params = useParams();
 
   useEffect(() => {
@@ -13,6 +14,7 @@ const Products = () => {
       try {
         const response = await axios.get('https://63f7c3f2833c7c9c608aeae0.mockapi.io/items');
         setProducts(response.data);
+        setIsLoading(false);
       } catch (err) {
         console.log('status:', err);
       }
@@ -28,6 +30,9 @@ const Products = () => {
   return (
     <div className={classes.container}>
       <h3>Products List</h3>
+
+      {isLoading ? 
+                <div className={classes.loading}></div> :
       <div>
         <ul className={classes.list}>
           {products.map((product) => (
@@ -41,8 +46,10 @@ const Products = () => {
         ))}
         <h3>ok</h3>
       </div>
+      }
+
       <h6>don't stress, do your best</h6>
-    </div>
+      </div>
   );
 };
 
