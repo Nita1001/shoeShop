@@ -22,7 +22,7 @@ const MainNavigation = () => {
                             )}>Collection</NavLink>
                     </li>
                     <NavLink
-                        to="/AddItemForm"
+                        to="/editItemForm"
                         className={({ isActive }) => (isActive ? classes.active : undefined)}>
                         Edit Products
                     </NavLink>

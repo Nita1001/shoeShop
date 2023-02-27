@@ -31,7 +31,7 @@ const ProductDetail = () => {
     }, [items, params.productId, selected])
 
     return (
-        <>
+        <div className={classes.container}>
             <h3>Take bold steps</h3>
             {isLoading ? (
                 <div className={classes.loading}></div>
@@ -39,7 +39,7 @@ const ProductDetail = () => {
                 <>
                     <h1>{selected.name}</h1>
                     <div className={classes.img}>
-                        <img src={selected.image} alt={selected.product}/>
+                        <img src={selected.image} alt={selected.product} />
                     </div>
                     <h3>Price: {selected.price}$</h3>
                 </>
@@ -51,7 +51,7 @@ const ProductDetail = () => {
                     Back
                 </Link>
             </p>
-        </>
+        </div>
     );
 };
 

@@ -23,30 +23,25 @@ const Products = () => {
 
   useEffect(() => {
     setSelected(products.find((item) => item.id === params.productId));
-}, [products, params.productId, selected])
+  }, [products, params.productId, selected])
 
   return (
     <div className={classes.container}>
       <h3>Products List</h3>
       <div>
-      <ul className={classes.list}>
+        <ul className={classes.list}>
+          {products.map((product) => (
+            <li key={product.id}>
+              <Link to={`/products/${product.id}`}>{product.product}</Link>
+            </li>
+          ))}
+        </ul>
         {products.map((product) => (
-
-          <li key={product.id}>
-            <Link to={`/products/${product.id}`}>{product.product}</Link>
-          </li>
-
+          <img href={`/products/${product.id}`} src={product.image} key={product.id} alt='' />
         ))}
-      </ul>
-        {products.map((product) => (
-
-<img href={`/products/${product.id}`} src={product.image} key={product.id} alt=''/>
-  
-
-
-))}
-            <h3>ok</h3>
+        <h3>ok</h3>
       </div>
+      <h6>don't stress, do your best</h6>
     </div>
   );
 };

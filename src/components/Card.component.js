@@ -2,10 +2,10 @@ import React from 'react'
 import classes from './Card.module.css'
 
 
-const Card = ({classN = classes.container}) => {
+const Card = ({ classN = classes.container, img }) => {
     return (
-        <div className={classN}>            
-            Card
+        <div className={classN}>
+
         </div>
     )
 }

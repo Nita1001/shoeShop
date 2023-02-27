@@ -1,6 +1,7 @@
 .container {
     margin-top: 0;
     background-color: #9cb4d2;
+    flex-wrap: wrap;
 }
 
 .list {
@@ -17,14 +18,22 @@
     text-decoration: none;
 }
 
-h3{
+h3 {
     margin-top: 0rem;
-    color: rgb(255, 255, 255);
+    color: white;
 }
 
-img{
+.pinkColored {
+    color: rgba(229, 164, 176, 0.9);
+}
+
+img {
     max-width: 200px;
     height: 200px;
+}
+
+h6{
+    color: rgba(141, 164, 192, 0.9);
 }
 
 /* #8f85b2 */

@@ -5,6 +5,8 @@
     margin: 0 auto;
     border-radius: 1rem;
     margin-bottom: 0.3rem;
+    align-items: center;
     justify-content: center;
     background-color: aquamarine;
 }
+

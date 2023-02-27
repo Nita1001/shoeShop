@@ -1,26 +1,40 @@
-.img img{
+.container {
+    width: 40rem;
+    height: 32rem;
+    margin: 0 auto;
+    padding-top: 2rem;
+    background-color: #09070711;
+}
+
+.img img {
     max-width: 400px;
     height: 400px;
 }
 
-.link{
+.link {
     font-size: small;
+    color: rgba(220, 212, 212, 0.5);
 }
-
-
+a:hover {
+    color: rgba(229, 164, 176, 0.55);
+}
 .loading {
     width: 30px;
     height: 30px;
     border-radius: 50%;
     display: inline-block;
-    border: 3px solid rgba(255,255,255,.3);
+    border: 3px solid rgba(255, 255, 255, 0.3);
     border-top-color: #090707;
     animation: spin 1s linear infinite;
-  }
-  
-  @keyframes spin {
-    0% { transform: rotate(360deg); }
-  }
-  @keyframes spin {
-    100% { transform: rotate(360deg); }
-  }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}

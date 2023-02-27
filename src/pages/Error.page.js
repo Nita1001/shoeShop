@@ -1,8 +1,12 @@
 import React from 'react'
+import MainNavigation from '../components/MainNavigation'
 
 const ErrorPage = () => {
   return (
-    <div>Error Page</div>
+    <>
+      <MainNavigation />
+      <div>Error Page</div>
+    </>
   )
 }
 

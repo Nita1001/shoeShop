@@ -6,8 +6,10 @@ import EditItemForm from './pages/EditItemForm';
 import RootLayout from './pages/Root';
 import ErrorPage from './pages/Error.page';
 import ProductDetail from './pages/ProductDetail';
-import './App.css';
+import AddItemForm from './pages/AddItemForm';
+import RemoveItemForm from './pages/RemoveItemForm';
 
+import './App.css';
 
 const router = createBrowserRouter([
   {
@@ -16,19 +18,18 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       { index: true, element: <HomePage /> },
-      { path: 'products', element: <Products /> },
-      { path: 'products/:productId', element: <ProductDetail /> },
-      { path: 'AddItemForm', element: <EditItemForm /> }
+      { path: '/products', element: <Products /> },
+      { path: '/products/:productId', element: <ProductDetail /> },
+      { path: '/editItemForm', element: <EditItemForm /> },
+      { path: '/editItemForm/addItemForm', element: <AddItemForm /> },
+      { path: '/editItemForm/removeItemForm', element: <RemoveItemForm /> }
     ],
   },
 ])
 
 function App() {
-
-
   return (
     <RouterProvider router={router} />
-
   );
 }
 
