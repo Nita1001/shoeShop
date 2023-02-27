@@ -18,6 +18,7 @@ const RemoveItemForm = () => {
 
     return (
         <div>
+            <h1 class='hide'>{data}</h1>
             <form className={classes.removeItem}>
                 <label htmlFor="product">Products Id:</label>
                 <input type="text" id="product" value={product} onChange={(e) => setProduct(e.target.value)} />
